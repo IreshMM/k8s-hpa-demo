@@ -14,14 +14,15 @@ spec:
       containers:
       - name: resource-app
         image: ireshmm/resource:2
-        imagePullPolicy: Always
         ports:
         - containerPort: 5000
         resources:
           limits:
             cpu: 500m
+            memory: 2Gi
           requests:
             cpu: 200m
+            memory: 512Mi
 ---
 apiVersion: v1
 kind: Service
